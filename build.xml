@@ -1,8 +1,11 @@
 <?xml version = "1.0" encoding = "UTF-8" ?>
 <project default = "clean" name = "myfirstbuild" >
 	<target name = "run" depends = "compile">
-		<java classname = "ProjectFileReader" classpath="./javaluator-3.0.1.jar">
-			<classpath path = "staging"/>
+		<java classname = "ProjectFileReader" >
+			<classpath>
+				<pathelement location = "./javaluator-3.0.1.jar"/>
+				<pathelement path = "./staging"/>
+			</classpath>
 		</java>
 	</target>
 	<target name = "compile" depends = "init">
